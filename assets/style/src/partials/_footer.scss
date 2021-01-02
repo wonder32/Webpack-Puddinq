@@ -1,0 +1,12 @@
+footer {
+  flex: 0 0 100%;
+  flex-flow: row wrap;
+  display:flex;
+  justify-content: center;
+  height: 100px;
+
+  ul {
+
+    display: inline-block;
+  }
+}
