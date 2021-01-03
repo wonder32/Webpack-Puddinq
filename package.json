@@ -1,5 +1,6 @@
 {
   "name": "dev.example.com",
+  "homepage": "https://github.com/wonder32/Webpack-Wordpress-Phpstorm#readme",
   "version": "1.0.0",
   "dependencies": {
     "@babel/polyfill": "^7.12.1"

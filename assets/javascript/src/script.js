@@ -3,5 +3,5 @@ import {test} from './modules/test';
 
 test();
 $( document ).ready(function() {
-    $('body').css('background', 'grey');
+    $('body').css('background', 'yellow');
 });
