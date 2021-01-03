@@ -8,6 +8,11 @@ function header() {
         $('body').css('background', 'yellow');
         console.log('this file is run by header.script.js');
         console.log('the source of this file is in /src/modules/header.js');
+
+        $('main').on('click', function() {
+           console.log('lekker');
+        });
+
     });
 
 }

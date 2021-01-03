@@ -2,16 +2,15 @@
   "name": "dev.example.com",
   "homepage": "https://github.com/wonder32/Webpack-Wordpress-Phpstorm#readme",
   "version": "1.0.0",
-  "dependencies": {
-    "@babel/polyfill": "^7.12.1"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "jquery": "^3.5.1",
+    "cross-env": "^7.0.3",
     "webpack": "^5.11.1",
     "webpack-cli": "^4.3.1"
   },
   "scripts": {
-    "build": "webpack --mode=production --no-watch",
-    "dev": "webpack --mode=development"
+    "prod": "cross-env NODE_ENV=production webpack",
+    "dev": "cross-env NODE_ENV=development webpack --watch",
+    "clean": "rm -rf assets/javascript/dist/* assets/style/dist/*"
   }
 }
