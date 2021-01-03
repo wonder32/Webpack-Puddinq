@@ -5,20 +5,20 @@ your sass files to css in a different folder and to build your javascript in the
 end up with one javascript files in the production environment while working with separate debuggable 
 modules in your development environment.
 
-## key features
+## Key features
 
 * compile scss to css
 * compile your es6 application to one bundle
 * working with webpack
 * use watch to automate all on the fly
 
-## basic start
+## Basic start
 
 ```
     //git clone or download the repo
-    git clone https://github.com/wonder32/Webpack-Wordpress-Phpstorm.git 
+    git clone https://github.com/wonder32/Webpack-Wordpress-Phpstorm.git your-theme-name
 
-    cd Webpack-Wordpress-Phpstorm
+    cd your-theme-name
     npm install
     npm run dev
 ```
@@ -40,5 +40,10 @@ There are to options that work out of the box:
 * production mode: (npm run build)
   With 'npm run build' your files will be compiled once in minified versions, so they are optimized for
   your production environment.
+  
+### webpack.config.js
+
+The webpack.config.js has al the settings how the scss and javascript needs to be converted.
+
 
 

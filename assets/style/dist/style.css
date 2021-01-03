@@ -348,9 +348,14 @@ body {
 }
 
 body,
-main {
+main,
+.content-container {
   display: flex;
   flex-direction: column;
+}
+
+.content-container {
+  flex: 1;
 }
 
 header, main, footer {
@@ -368,7 +373,7 @@ nav {
   }
 
   article {
-    flex: 1;
+    flex: none;
   }
 
   nav, aside {
