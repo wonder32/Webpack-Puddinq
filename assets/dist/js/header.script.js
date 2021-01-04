@@ -1,2 +1,0 @@
-(()=>{"use strict";var e={n:o=>{var r=o&&o.__esModule?()=>o.default:()=>o;return e.d(r,{a:r}),r},d:(o,r)=>{for(var n in r)e.o(r,n)&&!e.o(o,n)&&Object.defineProperty(o,n,{enumerable:!0,get:r[n]})},o:(e,o)=>Object.prototype.hasOwnProperty.call(e,o)};const o=jQuery;var r=e.n(o);r()(document).ready((function(){r()("body").css("background","yellow"),console.log("this file is run by header.script.js"),console.log("the source of this file is in /src/modules/header.js"),r()("main").on("click",(function(){console.log("lekker")}))}))})();
-//# sourceMappingURL=header.script.js.map
