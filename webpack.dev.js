@@ -1,24 +1,23 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const webpack = require('webpack');
 
 // JS Directory path.
 const JS_DIR = path.resolve( __dirname, 'assets/src/js' );
-const STYLE_DIR = path.resolve( __dirname, 'assets/src/scss' );
 const BUILD_DIR = path.resolve(__dirname, 'assets/dist');
 
 // Files to convert
 const entry = {
-    header: JS_DIR + '/main.js',
+    main: JS_DIR + '/main.js',
     footer: JS_DIR + '/footer.js',
-    style: STYLE_DIR + '/style.scss',
 };
 
 // output path and filename for js files
 const output = {
     path: BUILD_DIR,
+    publicPath: 'http://dev.example.com:55555/assets/dist/',
     filename: 'js/[name].script.js',
 };
+
 
 // output folder/name for css files is different from js
 const plugins = [
@@ -52,7 +51,7 @@ module.exports = {
             },
         ],
     },
-    optimization: {
-        removeEmptyChunks: true,
+    performance: {
+        hints: false
     },
 };

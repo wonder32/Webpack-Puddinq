@@ -13,11 +13,15 @@
     "sass-loader": "^10.1.0",
     "style-loader": "^2.0.0",
     "webpack": "^5.11.1",
-    "webpack-cli": "^4.3.1"
+    "webpack-cli": "^4.3.1",
+    "webpack-serve": "^3.2.0"
   },
   "scripts": {
-    "prod": "cross-env NODE_ENV=production webpack --config webpack.prod.js && rm -rf ./assets/dist/js/style.*.js*",
-    "dev": "cross-env NODE_ENV=development webpack --config webpack.dev.js --watch",
-    "clean": "rm -rf assets/dist/js/* assets/dist/css/*"
+    "prod": "npm run clean && cross-env NODE_ENV=production webpack --config webpack.prod.js",
+    "dev": "cross-env NODE_ENV=development webpack-serve --live-reload --config webpack.dev.js",
+    "clean": "rm -rf assets/dist/js/* assets/dist/css/* assets/dist/*.js*"
+  },
+  "serve": {
+    "host": "dev.example.com"
   }
 }

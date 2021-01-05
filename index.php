@@ -1,6 +1,6 @@
 <?php
 
-    define('WP_ENVIRONMENT_TYPE', 'production');
+    define('WP_ENVIRONMENT_TYPE', 'development');
 
 ?><!DOCTYPE html>
 <html lang="en">
@@ -14,8 +14,8 @@
         <script src="/assets/dist/js/main.script.js"></script>
         <link rel='stylesheet' href='/assets/dist/css/main.css' type='text/css' media='all' />
     <?php else : ?>
-        <script src="http://localhost:8080/assets/dist/js/main.script.js"></script>
-        <link rel='stylesheet' href='http://localhost:8080/assets/dist/css/main.css' type='text/css' media='all' />
+        <script src="http://dev.example.com:55555/assets/dist/js/main.script.js"></script>
+        <link rel='stylesheet' href='http://dev.example.com:55555/assets/dist/css/main.css' type='text/css' media='all' />
     <?php endif;  ?>
 
 </head>
