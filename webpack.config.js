@@ -31,6 +31,7 @@ const plugins = [
 
 
 module.exports = {
+    stats: 'errors-only',
     mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
     entry: entry,
     devtool: 'source-map',
@@ -46,7 +47,6 @@ module.exports = {
                 use: [
                     MiniCssExtractPlugin.loader,
                     'css-loader',
-                    'postcss-loader',
                     'sass-loader',
                 ],
             },
