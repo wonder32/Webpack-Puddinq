@@ -41,9 +41,9 @@ There are to options that work out of the box:
   With 'npm run prod' your files will be compiled once in minified versions, so they are optimized for
   your production environment.
   
-### webpack.config.js
+### webpack.dev.js
 
-The webpack.config.js has al the settings how the scss and javascript needs to be converted.
+The webpack.dev.js has al the settings how the scss and javascript needs to be converted.
 
 
 

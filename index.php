@@ -11,11 +11,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <?php if (WP_ENVIRONMENT_TYPE == "production") : ?>
-        <script src="/assets/dist/js/header.script.js"></script>
-        <link rel='stylesheet' href='/assets/dist/css/style.css' type='text/css' media='all' />
+        <script src="/assets/dist/js/main.script.js"></script>
+        <link rel='stylesheet' href='/assets/dist/css/main.css' type='text/css' media='all' />
     <?php else : ?>
-        <script src="http://localhost:8080/assets/dist/js/header.script.js"></script>
-        <link rel='stylesheet' href='http://localhost:8080/assets/dist/css/style.css' type='text/css' media='all' />
+        <script src="http://localhost:8080/assets/dist/js/main.script.js"></script>
+        <link rel='stylesheet' href='http://localhost:8080/assets/dist/css/main.css' type='text/css' media='all' />
     <?php endif;  ?>
 
 </head>

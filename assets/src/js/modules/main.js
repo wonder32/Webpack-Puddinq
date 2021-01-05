@@ -1,8 +1,8 @@
 import $ from "jquery";
 
-export {header};
+export {main};
 
-function header() {
+function main() {
 
     $( document ).ready(function() {
         $('body').css('background', 'yellow');

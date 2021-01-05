@@ -16,8 +16,8 @@
     "webpack-cli": "^4.3.1"
   },
   "scripts": {
-    "prod": "cross-env NODE_ENV=production webpack && rm -rf ./assets/dist/js/style.*.js*",
-    "dev": "cross-env NODE_ENV=development webpack --watch",
+    "prod": "cross-env NODE_ENV=production webpack --config webpack.prod.js && rm -rf ./assets/dist/js/style.*.js*",
+    "dev": "cross-env NODE_ENV=development webpack --config webpack.dev.js --watch",
     "clean": "rm -rf assets/dist/js/* assets/dist/css/*"
   }
 }
