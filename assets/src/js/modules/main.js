@@ -5,7 +5,7 @@ export {main};
 function main() {
 
     $( document ).ready(function() {
-        $('body').css('background', 'green');
+        $('body').css('background', 'yellow');
 
         $('main').on('click', function() {
            console.log('nice');
