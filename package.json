@@ -1,6 +1,8 @@
 {
-  "name": "Webpack WordPress Theme",
+  "name": "webpack-wordpress",
   "homepage": "https://github.com/wonder32/Webpack-Wordpress",
+  "license": "WTFPL",
+  "author": "wonder32 <info@puddinq.mobi> (http://www.puddinq.com)",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wonder32/Webpack-Wordpress.git"

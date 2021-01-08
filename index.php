@@ -1,8 +1,4 @@
-<?php
-
-    define('WP_ENVIRONMENT_TYPE', 'production');
-
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,13 +6,8 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <?php if (WP_ENVIRONMENT_TYPE == "production") : ?>
-        <script src="/assets/dist/js/main.js"></script>
-        <link rel='stylesheet' href='/assets/dist/css/main.css' type='text/css' media='all' />
-    <?php else : ?>
-        <script src="http://dev.example.com:55555/assets/dist/js/main.js"></script>
-        <link rel='stylesheet' href='http://dev.example.com:55555/assets/dist/css/main.css' type='text/css' media='all' />
-    <?php endif;  ?>
+    <script src="/content/themes/webpack-theme/assets/dist/js/main.js"></script>
+    <link rel='stylesheet' href='/content/themes/webpack-theme/assets/dist/css/main.css' type='text/css' media='all' />
 
 </head>
 <body>

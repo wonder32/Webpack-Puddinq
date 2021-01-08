@@ -43,8 +43,10 @@ module.exports = {
             filename: 'css/[name].css'
         }),
         new BrowserSyncPlugin({
+            host: 'dev.webpack.nl',
+            port: 3000,
             files: '**/**.php',
-            proxy: 'http://dev.example.com'
+            proxy: 'http://dev.webpack.nl'
         })
     ],
     optimization: {
