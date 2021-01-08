@@ -1,12 +1,12 @@
 footer {
-  flex: 0 0 100%;
-  flex-flow: row wrap;
-  display:flex;
-  justify-content: center;
-  height: 100px;
+	display: flex;
+	flex: 0 0 100%;
+	flex-flow: row wrap;
+	height: 100px;
+	justify-content: center;
 
-  ul {
+	ul {
 
-    display: inline-block;
-  }
+		display: inline-block;
+	}
 }

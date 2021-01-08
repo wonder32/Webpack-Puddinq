@@ -1,15 +1,15 @@
 header {
 
-  h1 {
-    order: 1;
-    text-align: right;
-    background: red  ;
-    color: blue;
-    font-size: 2em;
-  }
+	h1 {
+		background: $dark-blue;
+		color: $deep-cerulean;
+		font-size: 2em;
+		order: 1;
+		text-align: right;
+	}
 
-  sub {
-    order: 2;
-  }
+	sub {
+		order: 2;
+	}
 
 }
