@@ -1,7 +1,8 @@
 const path = require('path'),
     MiniCssExtractPlugin = require('mini-css-extract-plugin'),
     TerserPlugin = require('terser-webpack-plugin'),
-    BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+    BrowserSyncPlugin = require('browser-sync-webpack-plugin'),
+    StyleLintPlugin = require('stylelint-webpack-plugin');
 
 // Paths.
 const JS_DIR = path.resolve(__dirname, 'assets/src/js');
@@ -31,14 +32,38 @@ module.exports = {
             {
                 test: /\.s?css$/,
                 use: [
-                    MiniCssExtractPlugin.loader,
-                    'css-loader',
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            publicPath: '/content/themes/webpack-theme/assets/dist'
+                        }
+                    },
+                    {
+                        loader: 'css-loader',
+                        //options: { url: false }
+                    },
                     'sass-loader'
+                ]
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        outputPath: 'images/',
+                        name: '[name].[ext]',
+                        //emitFile: false
+                    }
+                },
+                'img-loader'
                 ]
             }
         ],
     },
     plugins: [
+        new StyleLintPlugin({
+            files: 'assets/src/scss/**/*.(s(c|a)ss|css)'
+        }),
         new MiniCssExtractPlugin({
             filename: 'css/[name].css'
         }),

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Javascript ES6 - example.com</title>
+    <title>Javascript ES6 - dev.webpack.nl</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -13,7 +13,7 @@
 <body>
 
     <header>
-        <h1>Javascript ES6 - example.com</h1>
+        <h1>Javascript ES6 - dev.webpack.nl</h1>
         <sub>a tryout axample</sub>
     </header>
 
