@@ -1,6 +1,3 @@
 import '../scss/footer.scss';
-
-import {footer} from './modules/footer';
-
+import { footer } from './modules/footer';
 footer();
-

@@ -4,7 +4,13 @@
     "es6": true,
     "node": true
   },
-  "extends": ["wordpress", "plugin:prettier/recommended", "plugin:@wordpress/eslint-plugin/esnext"],
+  "rules": {
+    "linebreak-style": ["warn", "windows"],
+    "indent": "off",
+    "space-in-parens": ["error", "never"],
+    "space-before-function-paren": ["error", "never"]
+  },
+  "extends": [/*"plugin:prettier/recommended",*/ "plugin:@wordpress/eslint-plugin/esnext"],
   "parser": "babel-eslint",
   "parserOptions": {
     "ecmaFeatures": {

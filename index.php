@@ -80,6 +80,6 @@
             <li>Link 3</li>
         </ul>
     </footer>
-    <script src="/assets/dist/js/footer.js" async></script>
+    <script src="/content/themes/webpack-theme/assets/dist/js/footer.js" async></script>
 </body>
 </html>

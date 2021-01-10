@@ -65,14 +65,14 @@ module.exports = {
             files: 'assets/src/scss/**/*.(s(c|a)ss|css)'
         }),
         new MiniCssExtractPlugin({
-            filename: 'css/[name].css'
+            filename: 'css/[name].css',
         }),
         new BrowserSyncPlugin({
-            host: 'dev.webpack.nl',
+            host: 'http://dev.webpack.nl',
             port: 3000,
             files: '**/**.php',
             proxy: 'http://dev.webpack.nl'
-        })
+        }),
     ],
     optimization: {
         minimizer: [
