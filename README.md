@@ -14,6 +14,8 @@ modules in your development environment.
 
 ## Basic start
 
+replace dev.webpack.nl with your domain name in all files 
+
 ```
     //git clone or download the repo
     git clone https://github.com/wonder32/Webpack-Wordpress-Phpstorm.git your-theme-name
@@ -28,11 +30,11 @@ modules in your development environment.
 This setup is an example, but you might start with bringing this example directly in your theme.
 To make this work out of the box after (basic start) you have two options: development or production.
 But there are a number of configurable options you might want to change, I wil try to explain most of
-those options.
+those options in the [wiki](https://github.com/wonder32/Webpack-Wordpress/wiki/Webpack-WordPress-wiki).
 
 ### Basic usage
 
-There are to options that work out of the box: 
+There are two options that work out of the box: 
 
 * development mode (npm run dev)  
   With the 'npm run dev' command a watch listener will stay active to update your styles and javascript 
@@ -41,9 +43,5 @@ There are to options that work out of the box:
   With 'npm run prod' your files will be compiled once in minified versions, so they are optimized for
   your production environment.
   
-### webpack.config.js
-
-The webpack.config.js has al the settings how the scss and javascript needs to be converted.
-
 
 

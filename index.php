@@ -6,8 +6,8 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <script src="/content/themes/webpack-theme/assets/dist/js/main.js"></script>
-    <link rel='stylesheet' href='/content/themes/webpack-theme/assets/dist/css/main.css' type='text/css' media='all' />
+    <script src="/wp-content/themes/webpack-puddinq/assets/dist/js/main.js"></script>
+    <link rel='stylesheet' href='/wp-content/themes/webpack-puddinq/assets/dist/css/main.css' type='text/css' media='all' />
 
 </head>
 <body>
@@ -80,6 +80,6 @@
             <li>Link 3</li>
         </ul>
     </footer>
-    <script src="/content/themes/webpack-theme/assets/dist/js/footer.js" async></script>
+    <script src="/wp-content/themes/webpack-puddinq/assets/dist/js/footer.js" async></script>
 </body>
 </html>

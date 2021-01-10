@@ -7,6 +7,10 @@
     "type": "git",
     "url": "git+https://github.com/wonder32/Webpack-Wordpress.git"
   },
+  "bugs": {
+    "url": "https://github.com/wonder32/Webpack-Wordpress/issues",
+    "email": "info@puddinq.mobi"
+  },
   "version": "1.0.0",
   "dependencies": {},
   "devDependencies": {
@@ -40,7 +44,7 @@
   "scripts": {
     "dev": "webpack --watch",
     "build": "webpack --mode=production",
-    "clean": "rm -rf ./assets/dist/css/* ./assets/dist/js/*",
+    "clean": "rm -rf ./assets/dist/*",
     "eslint": "eslint \"assets/src/js/**/*.{js,jsx}\" --quiet",
     "eslint:fix": "eslint \"assets/src/js/**/*.{js,jsx}\" --quiet --fix",
     "stylelint": "stylelint \"assets/src/scss/**/*.{css,scss}\"",

@@ -21,7 +21,7 @@ module.exports = {
         filename: 'js/[name].js',
     },
     externals: {
-        jquery: 'jQuery'
+        jquery: 'jQuery',
     },
     module: {
         rules: [
@@ -53,11 +53,11 @@ module.exports = {
                         outputPath: 'images/',
                         name: '[name].[ext]',
                         //emitFile: false
-                    }
+                    },
                 },
-                'img-loader'
-                ]
-            }
+                'img-loader',
+                ],
+            },
         ],
     },
     plugins: [
