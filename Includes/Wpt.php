@@ -35,7 +35,7 @@ class Wpt
 
     public function loadModulesGeneral()
     {
-
+        new ThemeSettings();
     }
 
     public function loadModulesFrontend()

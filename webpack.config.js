@@ -11,6 +11,7 @@ const BUILD_DIR = path.resolve(__dirname, 'assets/dist');
 // Change edit these
 const BUILD_DIR_PUBLIC = '/content/themes/webpack-theme/assets/dist';
 const WEBSITE_URL = 'https://dev.puddinq.com';
+const SSL_WEBSITE_URL = 'https://dev.puddinq.com';
 const SSL_KEY = 'C:\\wamp\\bin\\apache\\apache2.4.46\\conf\\key\\dev.puddinq.comnopass.key';
 const SSL_CERT = 'C:\\wamp\\bin\\apache\\apache2.4.46\\conf\\key\\dev.puddinq.com.crt';
 
@@ -78,7 +79,7 @@ module.exports = {
             host: WEBSITE_URL,
             port: 3000,
             files: '**/**.php',
-            proxy: WEBSITE_URL,
+            proxy: SSL_WEBSITE_URL,
             https: {
                 key: SSL_KEY,
                 cert: SSL_CERT,

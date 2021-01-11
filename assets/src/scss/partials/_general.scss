@@ -1,17 +1,28 @@
+@import "../config/colors";
 @import "../config/media";
 
 html {
-	background: black;
+	background: $gray-dark;
 	margin: 0;
 	padding: 0;
 }
 
 body {
 	align-items: stretch;
+	background-color: $white;
 	font-family: "helvetica neue", Helvetica, Arial, sans-serif;
 	margin: 0 auto;
-	padding: 0;
 	min-height: 100vh;
+	padding: 0;
+
+	a,
+	a:visited,
+	a:focus,
+	a:active {
+		color: $light-blue;
+		outline: 0;
+		text-decoration: none;
+	}
 }
 
 body,
@@ -25,21 +36,29 @@ main,
 	flex: 1;
 }
 
+.nav-top-thin,
 header,
 main,
 footer {
 	flex-shrink: 0;
 }
 
-nav {
-	order: -1;
-}
 
 @include for-size(tablet-landscape-up) {
 
 	body {
-		max-width: 80%;
-		max-width: 1300px;
+		box-shadow: 4px 0 5px 5px $black;
+		width: 95%;
+
+		@include for-size(desktop-up) {
+			width: 80%;
+
+			@include for-size(big-desktop-up) {
+				max-width: 1300px;
+			}
+
+		}
+
 
 		main {
 			flex: 1;
@@ -50,7 +69,6 @@ nav {
 			flex: none;
 		}
 
-		nav,
 		aside {
 
 			/* 12em is the width of the columns */
