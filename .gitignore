@@ -2,7 +2,10 @@
 /node_modules/*
 
 /package-lock.json
-.idea
+/.idea
 
 /assets/dist/
 /assets/src/img/
+
+/vendor/
+/composer.lock

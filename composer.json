@@ -1,0 +1,22 @@
+{
+  "name": "puddinq/webpack-theme",
+  "description": "Webpack theme easy for plugin development",
+  "minimum-stability": "stable",
+  "license": "WTFPL",
+  "type": "wordpress-theme",
+  "version": "v1.0.0",
+  "authors": [
+    {
+      "name": "Wonder32",
+      "email": "wonder32@puddinq.mobi"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Wpt\\": ""
+    }
+  },
+  "require": {
+    "php": ">=7.4"
+  }
+}

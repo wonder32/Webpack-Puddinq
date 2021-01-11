@@ -8,6 +8,12 @@ const path = require('path'),
 const JS_DIR = path.resolve(__dirname, 'assets/src/js');
 const BUILD_DIR = path.resolve(__dirname, 'assets/dist');
 
+// Change edit these
+const BUILD_DIR_PUBLIC = '/content/themes/webpack-theme/assets/dist';
+const WEBSITE_URL = 'https://dev.puddinq.com';
+const SSL_KEY = 'C:\\wamp\\bin\\apache\\apache2.4.46\\conf\\key\\dev.puddinq.comnopass.key';
+const SSL_CERT = 'C:\\wamp\\bin\\apache\\apache2.4.46\\conf\\key\\dev.puddinq.com.crt';
+
 module.exports = {
     mode: 'development',
     devtool: 'source-map',
@@ -35,43 +41,48 @@ module.exports = {
                     {
                         loader: MiniCssExtractPlugin.loader,
                         options: {
-                            publicPath: '/content/themes/webpack-theme/assets/dist'
-                        }
+                            publicPath: BUILD_DIR_PUBLIC,
+                        },
                     },
                     {
                         loader: 'css-loader',
                         //options: { url: false }
                     },
-                    'sass-loader'
-                ]
+                    'sass-loader',
+                ],
             },
             {
                 test: /\.(png|jpe?g|gif)$/i,
-                use: [{
-                    loader: 'file-loader',
-                    options: {
-                        outputPath: 'images/',
-                        name: '[name].[ext]',
-                        //emitFile: false
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            outputPath: 'images/',
+                            name: '[name].[ext]',
+                            //emitFile: false
+                        },
                     },
-                },
-                'img-loader',
+                    'img-loader',
                 ],
             },
         ],
     },
     plugins: [
         new StyleLintPlugin({
-            files: 'assets/src/scss/**/*.(s(c|a)ss|css)'
+            files: 'assets/src/scss/**/*.(s(c|a)ss|css)',
         }),
         new MiniCssExtractPlugin({
             filename: 'css/[name].css',
         }),
         new BrowserSyncPlugin({
-            host: 'http://dev.webpack.nl',
+            host: WEBSITE_URL,
             port: 3000,
             files: '**/**.php',
-            proxy: 'http://dev.webpack.nl'
+            proxy: WEBSITE_URL,
+            https: {
+                key: SSL_KEY,
+                cert: SSL_CERT,
+            },
         }),
     ],
     optimization: {
@@ -80,5 +91,5 @@ module.exports = {
                 extractComments: true,
             }),
         ],
-    }
-}
+    },
+};

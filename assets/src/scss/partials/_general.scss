@@ -1,7 +1,7 @@
 @import "../config/media";
 
-html,
-body {
+html {
+	background: black;
 	margin: 0;
 	padding: 0;
 }
@@ -9,6 +9,8 @@ body {
 body {
 	align-items: stretch;
 	font-family: "helvetica neue", Helvetica, Arial, sans-serif;
+	margin: 0 auto;
+	padding: 0;
 	min-height: 100vh;
 }
 
@@ -35,19 +37,24 @@ nav {
 
 @include for-size(tablet-landscape-up) {
 
-	main {
-		flex: 1;
-		flex-direction: row;
-	}
+	body {
+		max-width: 80%;
+		max-width: 1300px;
 
-	article {
-		flex: none;
-	}
+		main {
+			flex: 1;
+			flex-direction: row;
+		}
 
-	nav,
-	aside {
+		article {
+			flex: none;
+		}
 
-		/* 12em is the width of the columns */
-		flex: 0 0 12em;
+		nav,
+		aside {
+
+			/* 12em is the width of the columns */
+			flex: 0 0 12em;
+		}
 	}
 }

@@ -6,6 +6,7 @@
   },
   "rules": {
     "linebreak-style": ["warn", "windows"],
+    "no-console": "off",
     "indent": "off",
     "space-in-parens": ["error", "never"],
     "space-before-function-paren": ["error", "never"]
