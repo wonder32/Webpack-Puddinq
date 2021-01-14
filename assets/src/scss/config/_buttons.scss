@@ -1,0 +1,40 @@
+@import "colors";
+
+/*----------------------
+    Buttons
+-----------------------*/
+%btn,
+%btn:visited {
+	background: $gray-blue;
+	border: none;
+	color: $white;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 16px;
+	padding: 0.5em 1.5em;
+	text-align: center;
+	letter-spacing: 0.2em;
+	text-decoration: none;
+	transition: all 0.14s ease-in-out;
+
+	&:hover,
+	&:focus {
+		background: shade($gray-blue, 60%);
+		color: $white;
+		outline: none;
+		text-decoration: none;
+	}
+
+	&:active {
+		top: 1px;
+	}
+}
+
+.btn,
+input.btn,
+input[type="submit"],
+a.btn,
+a.btn:visited {
+
+	@extend %btn;
+}

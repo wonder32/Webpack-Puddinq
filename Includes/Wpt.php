@@ -16,11 +16,13 @@ class Wpt
         $this->loadModules();
     }
 
-    public function themeLanguage() {
-        load_theme_textdomain('puddinq-com',WPT_THEME_URI . '/languages' );
+    public function themeLanguage()
+    {
+        load_theme_textdomain('puddinq-com', WPT_THEME_URI . '/languages');
     }
 
-    private function loadModules() {
+    private function loadModules()
+    {
         /* @see Wpt::loadModulesGeneral() */
         add_action('after_setup_theme', [$this, 'loadModulesGeneral']);
 

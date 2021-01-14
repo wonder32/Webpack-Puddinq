@@ -15,14 +15,13 @@
 <body <?php body_class(); ?>>
 
 <!-- top thin menu -->
-<?php if (!wp_is_mobile()) : ?>
-    <?php wp_nav_menu(array(
-        'menu' => 'top-thin',
-        'container' => 'nav',
-        'container_aria_label' => 'Languages navigation',
-        'theme_location' => 'top-thin',
-    )); ?>
-<?php endif; ?>
+<?php wp_nav_menu(array(
+    'menu' => 'top-thin',
+    'container' => 'nav',
+    'container_aria_label' => 'Languages navigation',
+    'theme_location' => 'top-thin',
+)); ?>
+
 
 <header>
 
@@ -45,15 +44,27 @@
     <?php endif; ?>
     <span class="b-description"><?= get_bloginfo('description'); ?></span>
 
-    <!-- top main menu -->
-    <?php if (!wp_is_mobile()) : ?>
-        <?php wp_nav_menu(array(
-            'menu' => 'top-main',
-            'container' => 'nav',
-            'container_aria_label' => 'Main pages navigation',
-            'theme_location' => 'top-main',
-        )); ?>
-    <?php endif; ?>
+    <!-- top main menu desktop-->
+    <?php wp_nav_menu(array(
+        'menu' => 'top-main',
+        'container' => 'nav',
+        'container_aria_label' => 'Main pages navigation',
+        'theme_location' => 'top-main',
+    )); ?>
 
 
+    <!-- mobile button menu -->
+    <button class="btn js-menu-toggle menu-btn">Menu</button>
+    <!-- menu mobile-->
+    <?php wp_nav_menu(array(
+        'menu' => 'mobile-menu',
+        'container' => 'nav',
+        'container_aria_label' => 'Main pages mobile navigation',
+        'theme_location' => 'mobile-menu',
+    )); ?>
 </header>
+
+<div class="search-container">
+    <?= get_search_form(); ?>
+</div>
+

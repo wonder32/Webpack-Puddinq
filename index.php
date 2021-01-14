@@ -3,22 +3,23 @@
 
     <main>
         <div class="content-container">
-            <article>
-                Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. Aliquid blanditiis culpa cum cumque ducimus
-                eius eos est exercitationem officiis ratione,
-                similique sit totam ut. Alias amet eum iste itaque
-                molestiae!
+            <?php
+            if (have_posts()) {
+                // Load posts loop.
+                while (have_posts()) {
+                    the_post();
+                    if (is_singular()) {
+                        get_template_part('template-parts/articles/full');
+                    } else {
+                        get_template_part('template-parts/articles/excerpt');
+                    }
+                }
 
-            </article>
-            <article>
-                Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. Aliquid blanditiis culpa cum cumque ducimus
-                eius eos est exercitationem officiis ratione,
-                similique sit totam ut. Alias amet eum iste itaque
-                molestiae!
-
-            </article>
+                if (!is_singular()) {
+                    echo paginate_links();
+                }
+            }
+            ?>
         </div>
         <aside>
             <ul>

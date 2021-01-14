@@ -1,0 +1,35 @@
+
+@import "../config/colors";
+
+.search-container {
+	background-image: url("../../../../../uploads/2021/01/phpstorm-300x109.png");
+	height: 100px;
+	position: relative;
+
+	form {
+		background-color: $white;
+		border-radius: 8px;
+		left: 50%;
+		opacity: 80%;
+		overflow: hidden;
+		padding: 10px 40px;
+		position: relative;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: fit-content;
+	}
+}
+
+@include for-size(tablet-landscape-up) {
+	.search-container {
+		background-image: url("../../../../../uploads/2021/01/phpstorm-768x279.png");
+		height: 300px;
+
+		form {
+			font-size: 1.3em;
+			input[type="text"] {
+				font-size: 1.3em;
+			}
+		}
+	}
+}

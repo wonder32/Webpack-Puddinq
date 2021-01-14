@@ -11,17 +11,32 @@ body {
 	align-items: stretch;
 	background-color: $white;
 	font-family: "helvetica neue", Helvetica, Arial, sans-serif;
+	font-size: 1.05em;
+	letter-spacing: 0.05em;
+	line-height: 26px;
 	margin: 0 auto;
 	min-height: 100vh;
 	padding: 0;
+
+	&.admin-bar {
+		padding-top: 31px;
+	}
 
 	a,
 	a:visited,
 	a:focus,
 	a:active {
 		color: $light-blue;
+		font-weight: 550;
 		outline: 0;
 		text-decoration: none;
+	}
+	a:after {
+		content: '\000BB';
+	}
+
+	h1 {
+		color: $light-blue;
 	}
 }
 
@@ -72,7 +87,7 @@ footer {
 		aside {
 
 			/* 12em is the width of the columns */
-			flex: 0 0 12em;
+			flex: 0 0 16em;
 		}
 	}
 }

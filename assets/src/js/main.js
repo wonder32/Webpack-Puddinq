@@ -1,6 +1,11 @@
 import '../scss/style.scss';
 import '../scss/footer.scss';
 
-import { main } from './modules/main';
+import $ from 'jquery';
 
-main();
+import { mobileMenu } from './modules/mobile-menu';
+
+$(document).ready(function() {
+
+    mobileMenu();
+});

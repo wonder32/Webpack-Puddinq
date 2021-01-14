@@ -1,3 +1,3 @@
 import '../scss/footer.scss';
-import { footer } from './modules/footer';
-footer();
+import { search } from './modules/search';
+search();

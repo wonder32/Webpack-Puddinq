@@ -1,37 +1,77 @@
 @import "../config/colors";
+@import "../config/media";
 
-nav.menu-thin-container,
-nav.menu-main-container {
-
-	a {
-		color: $gray-light;
-	}
+.is-menu-on .menu-mobile-menu-container {
+	max-height: 300px;
 }
 
+/* main header elements */
+
 header {
+
+	position: relative;
 
 	> img {
 		margin: 10px;
 	}
 
-	span.b-title,
-	span.b-description {
-		line-height: 60px;
-		font-size: 1.5em;
-		font-weight: 700;
+	@include for-size(tablet-landscape-up) {
+
+		button.menu-btn {
+			display: none;
+		}
+	}
+
+	.menu-btn {
+		float: right;
+		margin: 10px;
 		vertical-align: top;
 	}
 
 	span.b-title {
 		color: $gray-pitch;
+		font-size: 1.5em;
+	}
+
+	span.b-title,
+	span.b-description {
+		font-weight: 700;
+		line-height: 60px;
+		vertical-align: top;
 	}
 
 	span.b-description {
 		color: $gray-light;
+		display: none;
+		font-size: 1.3em;
 	}
 
-	nav.menu-main-container	{
+	@include for-size(tablet-landscape-up) {
 
+		span.b-description {
+			display: inline-block;
+		}
+	}
+
+}
+
+/* navigation above header */
+nav {
+
+	a,
+	ul,
+	li,
+	img {
+		margin: 0;
+		padding: 0;
+	}
+
+	a {
+		color: $gray-light;
+	}
+
+	&.menu-main-container,
+	&.menu-thin-container {
 		float: right;
 		width: auto;
 
@@ -44,44 +84,70 @@ header {
 		a,
 		img {
 			display: inline-block;
-			margin: 0;
-			padding: 0;
 			vertical-align: middle;
 		}
 
+		li {
+			float: right;
+		}
+
 		a {
-			padding: 0 1em;
-			line-height: 60px;
-			font-weight: 700;
+			font-weight: 600;
+			padding: 5px 8px;
 		}
 	}
-}
 
-nav.menu-thin-container {
+	&.menu-main-container {
 
-	float: right;
-	width: auto;
+		display: none;
 
-	ul {
-		float: right;
+		a {
+			color: $gray-light;
+			font-size: 1.2em;
+			font-weight: 700;
+			line-height: 60px;
+			padding: 0 0.4em;
+		}
 	}
 
-	ul,
-	li,
-	a,
-	img {
-		display: inline-block;
-		margin: 0;
-		padding: 0;
-		vertical-align: middle;
+	&.menu-mobile-menu-container {
+		display: block;
+		max-height: 0;
+		overflow: hidden;
+		position: absolute;
+		text-align: center;
+		transition: max-height 0.2s ease-in-out;
+		width: 100%;
+
+		ul {
+			background-color: $white;
+			list-style: none;
+
+			> li {
+				padding-bottom: 8px;
+			}
+
+			a {
+				color: $gray-light;
+				font-weight: 600;
+			}
+		}
 	}
 
-	li {
-		float: right;
+	@include for-size(tablet-landscape-up) {
+
+		&.menu-main-container,
+		&.menu-thin-container {
+			display: block;
+		}
+
+		&.menu-mobile-menu-container {
+			display: none;
+		}
+
+		span.b-description {
+			display: inline-block;
+		}
 	}
 
-	a {
-		font-weight: 600;
-		padding: 5px 8px;
-	}
 }

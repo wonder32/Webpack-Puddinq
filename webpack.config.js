@@ -9,7 +9,7 @@ const JS_DIR = path.resolve(__dirname, 'assets/src/js');
 const BUILD_DIR = path.resolve(__dirname, 'assets/dist');
 
 // Change edit these
-const BUILD_DIR_PUBLIC = '/content/themes/webpack-theme/assets/dist';
+const BUILD_DIR_PUBLIC = '/wp-content/themes/webpack-puddinq/assets/dist';
 const WEBSITE_URL = 'https://dev.puddinq.com';
 const SSL_WEBSITE_URL = 'https://dev.puddinq.com';
 const SSL_KEY = 'C:\\wamp\\bin\\apache\\apache2.4.46\\conf\\key\\dev.puddinq.comnopass.key';
@@ -21,7 +21,7 @@ module.exports = {
     context: __dirname,
     entry: {
         main: JS_DIR + '/main.js',
-        footer: JS_DIR + '/footer.js',
+        footer: JS_DIR + '/search.js',
     },
     output: {
         path: BUILD_DIR,
