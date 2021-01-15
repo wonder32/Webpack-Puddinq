@@ -21,7 +21,7 @@ module.exports = {
     context: __dirname,
     entry: {
         main: JS_DIR + '/main.js',
-        footer: JS_DIR + '/search.js',
+        footer: JS_DIR + '/footer.js',
     },
     output: {
         path: BUILD_DIR,
