@@ -1,13 +1,11 @@
 import $ from 'jquery';
 
-export { main };
+export {main};
 
 function main() {
-
     $(document).ready(function() {
-
-    $('main').on('click', function() {
-      console.log('nice');
+        $('main').on('click', function() {
+            console.log('nice');
+        });
     });
-  });
 }

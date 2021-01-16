@@ -12,24 +12,40 @@
 		left: 50%;
 		opacity: 80%;
 		overflow: hidden;
-		padding: 10px 40px;
+		padding: 10px 15px;
 		position: relative;
 		top: 50%;
 		transform: translate(-50%, -50%);
 		width: fit-content;
+
+		input.search-field {
+			font-size: 1em;
+		}
+
+		input.search-submit {
+			padding: 0.2em 1.1em;
+		}
 	}
 }
 
 @include for-size(tablet-landscape-up) {
+
 	.search-container {
 		background-image: url("../../../../../uploads/2021/01/phpstorm-768x279.png");
 		height: 300px;
 
 		form {
 			font-size: 1.3em;
+			padding: 10px 40px;
+
 			input[type="text"] {
-				font-size: 1.3em;
+				font-size: 1em;
 			}
+
+			input.search-submit {
+				padding: 0.5em 1.5em;
+			}
+
 		}
 	}
 }

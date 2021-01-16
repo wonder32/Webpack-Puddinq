@@ -10,6 +10,7 @@ class ThemeSettings
     {
         $this->registerMenus();
         $this->support();
+        add_action('widgets_init', [$this, 'registerSidebar']);
     }
 
     private function registerMenus()
@@ -26,5 +27,18 @@ class ThemeSettings
     private function support()
     {
         add_theme_support('html5', array('search-form'));
+    }
+
+    public function registerSidebar()
+    {
+        register_sidebar(array(
+            'id' => 'main-sidebar',
+            'name' => __('Main sidebar', 'puddinq_com'),
+            'description' => __('The main sidebar', 'puddinq_com'),
+            'before_widget' => '<section id="%1$s" class="widget %2$s">',
+            'after_widget' => '</section>',
+            'before_title' => '<div class="widget-title">',
+            'after_title' => '</div>'
+        ));
     }
 }

@@ -3,6 +3,8 @@
   "plugins": ["stylelint-order"],
   "rules": {
     "order/properties-alphabetical-order": true,
-    "max-line-length": 120
+    "max-line-length": 120,
+    "selector-pseudo-element-colon-notation": "single",
+    "function-url-quotes": "always"
   }
 }

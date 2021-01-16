@@ -6,9 +6,11 @@ use Wpt\Includes\Wpt;
  *      BLOCK DIRECT ACCESS
  ************************************/
 
-if ( ! defined('WPINC')) {
+if (!defined('WPINC')) {
     die;
 }
+
+//define('ICL_DONT_LOAD_LANGUAGE_SELECTOR_CSS', true);
 
 /************************************
  *      AUTO LOADING

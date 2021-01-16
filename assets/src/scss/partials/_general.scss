@@ -18,10 +18,6 @@ body {
 	min-height: 100vh;
 	padding: 0;
 
-	&.admin-bar {
-		padding-top: 31px;
-	}
-
 	a,
 	a:visited,
 	a:focus,
@@ -30,9 +26,6 @@ body {
 		font-weight: 550;
 		outline: 0;
 		text-decoration: none;
-	}
-	a:after {
-		content: '\000BB';
 	}
 
 	h1 {

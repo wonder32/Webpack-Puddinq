@@ -1,5 +1,4 @@
 import '../scss/style.scss';
-import '../scss/footer.scss';
 
 import $ from 'jquery';
 

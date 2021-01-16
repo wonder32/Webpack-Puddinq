@@ -16,18 +16,19 @@
                 }
 
                 if (!is_singular()) {
+                    echo '<div class="puddinq-pagination">';
                     echo paginate_links();
+                    echo '</div>';
                 }
             }
             ?>
         </div>
         <aside>
-            <ul>
-                <li>Subject 1</li>
-                <li>Link 1</li>
-                <li>Link 2</li>
-                <li>Link 3</li>
-            </ul>
+            <?php
+            if (is_active_sidebar('main-sidebar')) {
+                dynamic_sidebar('main-sidebar');
+            }
+            ?>
         </aside>
     </main>
 <?php get_footer(); ?>

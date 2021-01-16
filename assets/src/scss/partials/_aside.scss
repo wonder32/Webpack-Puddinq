@@ -1,1 +1,27 @@
+@import "../config/colors";
 
+aside {
+
+	.widget-title {
+		color: $light-blue;
+		font-weight: 550;
+		margin-top: 1em;
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+
+		a {
+			font-weight: initial;
+		}
+
+		a:before {
+			content: "\000BB";
+		}
+	}
+}
