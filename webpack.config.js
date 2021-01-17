@@ -3,6 +3,7 @@ const path = require('path'),
     TerserPlugin = require('terser-webpack-plugin'),
     BrowserSyncPlugin = require('browser-sync-webpack-plugin'),
     StyleLintPlugin = require('stylelint-webpack-plugin'),
+    webpack = require('webpack'),
     ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 // Paths.
@@ -15,6 +16,10 @@ const WEBSITE_URL = 'https://dev.puddinq.com';
 const SSL_WEBSITE_URL = 'https://dev.puddinq.com';
 const SSL_KEY = 'C:\\wamp\\bin\\apache\\apache2.4.46\\conf\\key\\dev.puddinq.comnopass.key';
 const SSL_CERT = 'C:\\wamp\\bin\\apache\\apache2.4.46\\conf\\key\\dev.puddinq.com.crt';
+
+// process.on('warning', (warning) => {
+//     console.log(warning.stack);
+// });
 
 module.exports = (env, options) => {
     return {
@@ -31,6 +36,7 @@ module.exports = (env, options) => {
         },
         externals: {
             jquery: 'jQuery',
+            "jquery-ui": "jquiery-ui",
         },
         module: {
             rules: [
@@ -71,17 +77,26 @@ module.exports = (env, options) => {
             ],
         },
         plugins: [
+            new ImageminPlugin({
+                test: /\.(jpe?g|png|gif|svg)$/i,
+                disable: options.mode !== 'production', // Disable during development
+                pngquant: {
+                    quality: '95-100',
+                },
+            }),
+            new webpack.ProvidePlugin({
+                $: "jquery",
+                jQuery: "jquery",
+                "window.jQuery": "jquery",
+                "window.ajaxData": "ajaxData",
+                "jquery-ui": "jquery-ui",
+                "window.jquery-ui": "jquery-ui",
+            }),
             new StyleLintPlugin({
                 files: 'assets/src/scss/**/*.(s(c|a)ss|css)',
             }),
             new MiniCssExtractPlugin({
                 filename: 'css/[name].css',
-            }),
-            new ImageminPlugin({
-                disable: options.mode !== 'production', // Disable during development
-                pngquant: {
-                    quality: '95-100',
-                },
             }),
             new BrowserSyncPlugin({
                 host: WEBSITE_URL,

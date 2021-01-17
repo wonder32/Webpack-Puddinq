@@ -42,12 +42,13 @@ class Wpt
     public function loadModulesFrontend()
     {
         new AssetsFrontend();
+
         new Wpml();
     }
 
     public function loadModulesBackend()
     {
-
+        new AjaxGetPosts();
     }
 
 }

@@ -1,10 +1,7 @@
 import '../scss/footer.scss';
+import {search} from './modules/search';
 
-import $ from 'jquery';
-
-import { mobileMenu } from './modules/mobile-menu';
 
 $(document).ready(function() {
-
-    mobileMenu();
+    search();
 });
