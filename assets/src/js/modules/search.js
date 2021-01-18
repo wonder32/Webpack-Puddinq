@@ -1,28 +1,33 @@
 import {searchPosts} from './search-posts';
-
+import $ from 'jquery';
 export {search};
 
-let cache = {};
-
+const cache = {};
 
 function search() {
     $('.search-field').autocomplete({
+        open() {
+            $('ul.ui-menu').width($(this).innerWidth() * 1.6);
+        },
         minLength: 3,
-        source: function(term, suggest) {
-            let termout = term.term;
+        source(term, suggest) {
+            const termout = term.term;
             if (termout in cache) {
                 suggest(cache[ termout ]);
                 return;
             }
             searchPosts(term, suggest);
         },
-        focus: function(event, ui) {
-            if ($('.search-field').val(ui.item.label.replace(/(<([^>]+)>)/ig,''))) {
+        focus(event, ui) {
+            if ($('.search-field').val(ui.item.label.replace(/(<([^>]+)>)/ig, ''))) {
                 return false;
             }
         },
-        select: function(event, ui) {
+        select(event, ui) {
             window.location.href = ui.item.link;
-        }
+        },
     });
+    $('.search-field').autocomplete(
+        'option', 'position', {my: 'center top', at: 'left bottom'}
+    );
 }

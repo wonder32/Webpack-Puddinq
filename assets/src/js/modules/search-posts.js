@@ -14,7 +14,7 @@ function searchPosts(term, suggest) {
             search: term,
         },
 
-        success: function(response) {
+        success(response) {
             //cache[ term ] = response;
             suggest(response);
         },

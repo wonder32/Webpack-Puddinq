@@ -31,7 +31,7 @@ class AjaxGetPosts
             $cat = isset($category[0]) ? $category[0]->name : '';
 
             $return[] = array(
-                'label' => $cat . ': ' . $post->post_title,
+                'label' => substr($cat . ': ' . $post->post_title, 0, 44),
                 'link' => $link
             );
         }
