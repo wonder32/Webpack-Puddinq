@@ -22,9 +22,9 @@ require_once 'vendor/autoload.php';
  *      CONSTANTS
  ************************************/
 
-define ('NPLDIR', plugin_dir_path(__FILE__));
-define ('NPLFILE', __FILE__);
-define ('WPT_THEME_URI', get_template_directory_uri());
-define ('WPT_THEME_PATH', get_template_directory());
+define('WPT_DIR', plugin_dir_path(__FILE__));
+define('WPT_FILE', __FILE__);
+define('WPT_THEME_URI', get_template_directory_uri());
+define('WPT_THEME_PATH', get_template_directory());
 
 $wpt = new Wpt();

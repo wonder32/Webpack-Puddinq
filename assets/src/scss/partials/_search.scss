@@ -1,9 +1,9 @@
-
+@import "../config/media";
 @import "../config/colors";
 
 .search-container {
 	background-image: url("../../../../../uploads/2021/01/phpstorm-300x109.png");
-	height: 100px;
+	height: 150px;
 	position: relative;
 
 	form {
@@ -14,7 +14,7 @@
 		overflow: hidden;
 		padding: 10px 15px;
 		position: relative;
-		top: 50%;
+		top: 29%;
 		transform: translate(-50%, -50%);
 		width: fit-content;
 
@@ -25,6 +25,26 @@
 		input.search-submit {
 			padding: 0.2em 1.1em;
 		}
+	}
+
+	h1 {
+		background-color: $white;
+		border-radius: 8px;
+		font-size: 1.2em;
+		left: 50%;
+		opacity: 80%;
+		overflow: hidden;
+		padding: 10px 15px;
+		position: relative;
+		top: 7%;
+
+		@include for-size(tablet-landscape-up) {
+			top: 35%;
+			font-size: 1.5em;
+		}
+
+		transform: translate(-50%, -50%);
+		width: fit-content;
 	}
 }
 

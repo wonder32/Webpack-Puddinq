@@ -1,4 +1,21 @@
+@import "../config/colors";
+
 article,
 section {
 	padding: 0 12px;
+}
+
+article {
+
+	.article-meta {
+
+		color: $black;
+		font-weight: 550;
+	}
+
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
 }

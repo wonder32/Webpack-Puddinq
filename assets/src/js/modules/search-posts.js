@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import ajaxData from 'ajaxData';
 export {searchPosts};
 
 function searchPosts(term, suggest) {

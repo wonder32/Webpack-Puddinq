@@ -1,4 +1,4 @@
-
+@import "../config/media";
 @import "../config/colors";
 
 /* custom */
@@ -10,9 +10,14 @@ ul.ui-autocomplete {
 
 	li {
 
-		padding-left: 8px;
 		cursor: pointer;
+		font-size: 0.85em;
+		letter-spacing: 0;
+		padding-left: 8px;
 
+		@include for-size(tablet-landscape-up) {
+			font-size: 0.85em;
+			letter-spacing: 0;
+		}
 	}
-
 }

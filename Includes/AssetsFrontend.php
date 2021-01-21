@@ -72,12 +72,12 @@ class AssetsFrontend
         if (wp_get_environment_type() != 'production') {
             wp_enqueue_style('puddinq-style', WPT_THEME_URI . '/assets/dist/css/main.css', '', '', '');
         }
-        wp_enqueue_style('puddinq-style', WPT_THEME_URI . '/assets/dist/css/footer.css', '', '', '');
+        wp_enqueue_style('puddinq-footer-style', WPT_THEME_URI . '/assets/dist/css/footer.css', '', '', '');
 
         wp_enqueue_script('puddinq-script', WPT_THEME_URI . '/assets/dist/js/main.js', array('jquery'), '', false);
 
         wp_enqueue_script('jquery-ui-autocomplete', '', array('jquery', 'jquery-ui-widget', 'jquery-ui-position'), '1.12.1');
-        wp_enqueue_style( 'jquery-ui-styles' );
+        wp_enqueue_style('jquery-ui-styles');
 
         wp_enqueue_script('puddinq-script-footer', WPT_THEME_URI . '/assets/dist/js/footer.js', array('jquery'), '', true);
         wp_localize_script('puddinq-script-footer', 'ajaxData', $value);

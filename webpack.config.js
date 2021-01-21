@@ -37,6 +37,7 @@ module.exports = (env, options) => {
         externals: {
             jquery: 'jQuery',
             "jquery-ui": "jquiery-ui",
+            "ajaxData": "ajaxData",
         },
         module: {
             rules: [

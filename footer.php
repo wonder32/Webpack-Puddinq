@@ -1,30 +1,6 @@
-
 <footer>
-    <ul>
-        <li>Subject 1</li>
-        <li>Link 1</li>
-        <li>Link 2</li>
-        <li>Link 3</li>
-    </ul>
-    <ul>
-        <li>Subject 1</li>
-        <li>Link 1</li>
-        <li>Link 2</li>
-        <li>Link 3</li>
-    </ul>
-    <ul>
-        <li>Subject 1</li>
-        <li>Link 1</li>
-        <li>Link 2</li>
-        <li>Link 3</li>
-    </ul>
-    <ul>
-        <li>Subject 1</li>
-        <li>Link 1</li>
-        <li>Link 2</li>
-        <li>Link 3</li>
-    </ul>
-</footer>
+<?php echo "puddinq.com &copy; " . date("Y"); ?>
 <?php wp_footer(); ?>
+</footer>
 </body>
 </html>

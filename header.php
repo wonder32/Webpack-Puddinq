@@ -2,7 +2,19 @@
 <html <?php language_attributes(); ?>>
 <head>
 
-    <title><?php the_title(); ?></title>
+    <?php
+    if (is_front_page()) :
+        $title = __('Puddinq.com - sharing knowledge', 'puddinq-com');
+    elseif (is_home()) :
+        $title = __('Puddinq.com - blog', 'puddinq-com');
+    elseif (is_tax('plugin-cat')) :
+        $term = get_term_by( 'slug', get_query_var('plugin'), 'plugin-cat' );
+        $title = $term->name;
+    else :
+        $title = get_the_title();
+    endif;
+    ?>
+    <title><?= $title; ?></title>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -30,7 +42,7 @@
     <?php if (!is_front_page()) : ?>
     <a class="site-logo" href="<?php echo home_url(); ?>" rel="nofollow" title="Back home">
     <?php endif; ?>
-        <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Logo" height="40" width="40"/>
+        <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Logo" height="40" width="40" title="Puddinq - logo" loading="lazy"/>
     <?php if (!is_front_page()) : ?>
     </a>
     <?php endif; ?>
@@ -64,12 +76,16 @@
         'theme_location' => 'mobile-menu',
     )); ?>
 </header>
-
+<?php
+//global $wp_query;
+//echo '<pre>';
+//print_r($wp_query);
+//echo '</pre>';
+?>
 <div class="search-container">
     <?= get_search_form(); ?>
+    <?php
+        printf('<h1>%s</h1>', $title);
+    ?>
 </div>
-
-<footer>
-    <?php wp_footer(); ?>
-</footer>
 

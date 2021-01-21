@@ -27,7 +27,4 @@ function search() {
             window.location.href = ui.item.link;
         },
     });
-    $('.search-field').autocomplete(
-        'option', 'position', {my: 'center top', at: 'left bottom'}
-    );
 }

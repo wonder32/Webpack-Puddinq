@@ -8,8 +8,8 @@ class Wpml
     public function __construct()
     {
         /* @see AssetsFrontend::languageSwitcherInMenu() */
-        add_action('wp_nav_menu_thin_items', [$this, 'languageSwitcherInMenu'], 20, 2);
-        add_action('wp_nav_menu_mobile-menu_items', [$this, 'languageSwitcherInMenu'], 20, 2);
+//        add_action('wp_nav_menu_thin_items', [$this, 'languageSwitcherInMenu'], 20, 2);
+//        add_action('wp_nav_menu_mobile-menu_items', [$this, 'languageSwitcherInMenu'], 20, 2);
     }
 
     public function languageSwitcherInMenu($items, $args)
