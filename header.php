@@ -35,7 +35,6 @@
     'theme_location' => 'top-thin',
 )); ?>
 
-
 <header>
 
     <!-- logo -->

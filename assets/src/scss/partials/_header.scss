@@ -1,7 +1,8 @@
 @import "../config/colors";
 @import "../config/media";
 
-.is-menu-on .menu-mobile-menu-container {
+.is-menu-on .menu-mobile-menu-container,
+.is-menu-on .menu-mobile-menu-dutch-container, {
 	max-height: 300px;
 }
 
@@ -72,6 +73,8 @@ nav {
 	}
 
 	&.menu-main-container,
+	&.menu-hoofd-container,
+	&.menu-thin-dutch-container,
 	&.menu-thin-container {
 		float: right;
 		width: auto;
@@ -94,10 +97,12 @@ nav {
 		}
 	}
 
+	&.menu-thin-dutch-container,
 	&.menu-thin-container {
 		padding-right: 12px;
 	}
 
+	&.menu-hoofd-container,
 	&.menu-main-container {
 
 		display: none;
@@ -110,7 +115,7 @@ nav {
 			padding: 0 0.4em;
 		}
 	}
-
+	&.menu-mobile-menu-dutch-container,
 	&.menu-mobile-menu-container {
 		display: block;
 		max-height: 0;
@@ -139,10 +144,13 @@ nav {
 	@include for-size(tablet-landscape-up) {
 
 		&.menu-main-container,
+		&.menu-hoofd-container,
+		&.menu-thin-dutch-container,
 		&.menu-thin-container {
 			display: block;
 		}
 
+		&.menu-mobile-menu-dutch-container,
 		&.menu-mobile-menu-container {
 			display: none;
 		}

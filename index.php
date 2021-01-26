@@ -14,7 +14,9 @@
             // Load posts loop.
             while (have_posts()) {
                 the_post();
-                if (is_singular()) {
+                if ($post->post_type === 'pluginversions') {
+                    get_template_part('template-parts/articles/plugin-version');
+                } elseif (is_singular()) {
                     get_template_part('template-parts/articles/full');
                 } else {
                     get_template_part('template-parts/articles/excerpt');
