@@ -2,6 +2,18 @@
 <html <?php language_attributes(); ?>>
 <head>
 
+    <?php if (WP_ENVIRONMENT_TYPE === 'production') : ?>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TC363WHH0M"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-TC363WHH0M');
+    </script>
+    <?php endif; ?>
+
     <?php
     if (is_front_page()) :
         $title = __('Puddinq.com - sharing knowledge', 'puddinq-com');
