@@ -5,7 +5,7 @@
     "node": true
   },
   "rules": {
-    "linebreak-style": ["warn", "windows"],
+    "linebreak-style": ["warn", "unix"],
     "no-console": "off",
     "indent": "off",
     "space-in-parens": ["error", "never"],

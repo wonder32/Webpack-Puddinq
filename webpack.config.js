@@ -12,10 +12,9 @@ const BUILD_DIR = path.resolve(__dirname, 'assets/dist');
 
 // Change edit these
 const BUILD_DIR_PUBLIC = '/wp-content/themes/webpack-puddinq/assets/dist';
-const WEBSITE_URL = 'https://dev.puddinq.com';
-const SSL_WEBSITE_URL = 'https://dev.puddinq.com';
-const SSL_KEY = 'C:\\wamp\\bin\\apache\\apache2.4.46\\conf\\key\\dev.puddinq.comnopass.key';
-const SSL_CERT = 'C:\\wamp\\bin\\apache\\apache2.4.46\\conf\\key\\dev.puddinq.com.crt';
+const WEBSITE_URL = 'www.puddinq.com.test';
+const SSL_KEY = '/Users/stefanschotvanger/.config/valet/Certificates/puddinq.com.test.key';
+const SSL_CERT = '/Users/stefanschotvanger/.config/valet/Certificates/puddinq.com.test.crt';
 
 // process.on('warning', (warning) => {
 //     console.log(warning.stack);
@@ -100,10 +99,9 @@ module.exports = (env, options) => {
                 filename: 'css/[name].css',
             }),
             new BrowserSyncPlugin({
+                proxy: 'https://' + WEBSITE_URL,
                 host: WEBSITE_URL,
-                port: 3000,
                 files: '**/**.php',
-                proxy: SSL_WEBSITE_URL,
                 https: {
                     key: SSL_KEY,
                     cert: SSL_CERT,
