@@ -4,7 +4,7 @@
   "minimum-stability": "stable",
   "license": "WTFPL",
   "type": "wordpress-theme",
-  "version": "v1.0.0",
+  "version": "v1.0.1",
   "authors": [
     {
       "name": "Wonder32",
@@ -17,6 +17,6 @@
     }
   },
   "require": {
-    "php": ">=7.4"
+    "php": ">=8.0"
   }
 }

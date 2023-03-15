@@ -35,8 +35,8 @@ module.exports = (env, options) => {
         },
         externals: {
             jquery: 'jQuery',
-            "jquery-ui": "jquiery-ui",
-            "ajaxData": "ajaxData",
+            'jquery-ui': 'jquery-ui',
+            ajaxData: 'ajaxData',
         },
         module: {
             rules: [
@@ -85,12 +85,12 @@ module.exports = (env, options) => {
                 },
             }),
             new webpack.ProvidePlugin({
-                $: "jquery",
-                jQuery: "jquery",
-                "window.jQuery": "jquery",
-                "window.ajaxData": "ajaxData",
-                "jquery-ui": "jquery-ui",
-                "window.jquery-ui": "jquery-ui",
+                $: 'jquery',
+                jQuery: 'jquery',
+                'window.jQuery': 'jquery',
+                'window.ajaxData': 'ajaxData',
+                'jquery-ui': 'jquery-ui',
+                'window.jquery-ui': 'jquery-ui',
             }),
             new StyleLintPlugin({
                 files: 'assets/src/scss/**/*.(s(c|a)ss|css)',
