@@ -3,7 +3,7 @@
 
 .search-container {
 	background-image: url("../../../../../uploads/2021/01/phpstorm-300x109.png");
-	height: 150px;
+	height: 170px;
 	position: relative;
 
 	form {
@@ -36,7 +36,7 @@
 		overflow: hidden;
 		padding: 10px 15px;
 		position: relative;
-		top: 7%;
+		top: 18%;
 
 		@include for-size(tablet-landscape-up) {
 			font-size: 1.5em;
