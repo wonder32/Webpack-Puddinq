@@ -1,6 +1,5 @@
 <?php
 
-use Wpt\Includes\Wpt;
 
 /************************************
  *      BLOCK DIRECT ACCESS
@@ -14,14 +13,16 @@ if ( ! defined('WPINC')) {
  *      AUTO LOADING
  ************************************/
 
-require_once 'vendor/autoload.php';
+require_once  __DIR__ . '/vendor/autoload.php';
+
+use Wpt\Includes\Wpt;
 
 /************************************
  *      CONSTANTS
  ************************************/
 
-define ('NPLDIR', plugin_dir_path(__FILE__));
-define ('NPLFILE', __FILE__);
+const NPL_FILE = __FILE__;
+define ('NPL_DIR', plugin_dir_path(NPL_FILE));
 define ('WPT_THEME_URI', get_template_directory_uri());
 
 $wpt = new Wpt();
