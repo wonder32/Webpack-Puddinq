@@ -11,7 +11,7 @@ const JS_DIR = path.resolve(__dirname, 'assets/src/js');
 const BUILD_DIR = path.resolve(__dirname, 'assets/dist');
 
 // Change edit these
-const BUILD_DIR_PUBLIC = '/content/themes/webpack-puddinq/assets/dist';
+const BUILD_DIR_PUBLIC = '/content/themes/puddinq-webpack/assets/dist';
 const WEBSITE_URL = 'www.puddinq.com.test';
 const SSL_KEY = '/Users/stefanschotvanger/.config/valet/Certificates/puddinq.com.test.key';
 const SSL_CERT = '/Users/stefanschotvanger/.config/valet/Certificates/puddinq.com.test.crt';
