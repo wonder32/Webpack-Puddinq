@@ -60,6 +60,7 @@ module.exports = (env, options) => {
                             //options: { url: false }
                         },
                         'sass-loader',
+                        'postcss-loader', // Add postcss-loader here
                     ],
                 },
                 {
