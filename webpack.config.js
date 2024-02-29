@@ -109,6 +109,10 @@ module.exports = (env, options) => {
                     cert: SSL_CERT,
                 },
             }),
+            new webpack.ProvidePlugin({
+                $: 'jquery',
+                jQuery: 'jquery',
+            }),
         ],
         optimization: {
             minimizer: [
